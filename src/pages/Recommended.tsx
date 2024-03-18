@@ -6,8 +6,9 @@ import endpoint from 'utils/endpoint'
 import fetcher from 'utils/fetcher'
 
 export default function Recommended() {
-  const { data, isLoading } = useSWR(`${endpoint}/recommended-musics`, (arg) =>
-    fetcher(arg)
+  const { data, isLoading } = useSWR(
+    `${endpoint}/recommended-musics`,
+    (arg: string) => fetcher(arg)
   )
   return (
     <div className='relative'>
