@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-white/60 max-w-7xl mx-auto px-3 sm:px-4 xl:px-0;
+  }
+  main {
+    height: calc(100vh - 5rem);
+  }
+  h1,
+  h2 {
+    @apply font-medium;
+  }
+}
+
+.recommended {
+  height: calc(100vh - 10rem);
+  overflow: auto;
+}
+
+@media (min-width: 1024px) {
+  .trending {
+    height: calc(100vh - 11rem);
+    overflow: auto;
+  }
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
