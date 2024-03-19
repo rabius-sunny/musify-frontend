@@ -1,4 +1,10 @@
 import { useState } from 'react'
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/clerk-react'
 import { motion } from 'framer-motion'
 import { AlignRight, X } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
@@ -70,6 +76,14 @@ export default function Sheet() {
                 {item.title}
               </Link>
             ))}
+            <div className='px-4 w-full'>
+              <SignedOut>
+                <SignInButton />
+              </SignedOut>
+              <SignedIn>
+                <UserButton afterSignOutUrl='/' />
+              </SignedIn>
+            </div>
           </div>
         </motion.div>
       </motion.div>

@@ -8,7 +8,7 @@ export default function SearchResult() {
   const { searchKey } = useParams()
   const { data, isLoading } = useSWR(
     `${endpoint}/search-music?q=${searchKey?.split('-').join(' ')}`,
-    (arg: string) => fetcher(arg)
+    (arg) => fetcher(arg)
   )
 
   return (

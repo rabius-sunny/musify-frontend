@@ -8,7 +8,8 @@ export default defineConfig({
       components: '/src/components',
       pages: '/src/pages',
       assets: '/src/assets',
-      utils: '/src/utils'
+      utils: '/src/utils',
+      constants: '/src/constants'
     }
   }
 })
